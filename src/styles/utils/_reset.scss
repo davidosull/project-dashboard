@@ -1,0 +1,47 @@
+* {
+	background-color: transparent;
+	border: 0;
+	box-sizing: border-box;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background-color: white;
+	font-size: 62.5%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+
+	@media screen and (prefers-reduced-motion: reduce) {
+		scroll-behavior: auto;
+	}
+}
+
+input,
+select,
+textarea,
+button {
+	color: inherit;
+	display: inline-block;
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+
+	th,
+	td {
+		text-align: left;
+	}
+}

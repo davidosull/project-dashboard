@@ -1,0 +1,51 @@
+.login {
+  background-color: $colorBackground;
+  display: flex;
+  align-items: center;
+
+  h2 {
+    margin-bottom: $l2;
+  }
+
+  form {
+    label {
+      margin-bottom: $s2;
+      display: block;
+    }
+
+    input {
+      border-radius: $br;
+      &:not(.button) {
+        margin-bottom: $l2;
+        background: white;
+      }
+    }
+  }
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: clamp($l2, 3vw, $l3);
+    padding-bottom: clamp($l2, 3vw, $l3);
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 51.2rem;
+    align-self: center;
+  }
+
+  &__reset {
+    margin-top: $m2;
+  }
+}
+
+.post-password-form {
+  input[type='submit'] {
+    @extend .btn;
+    @extend .btn--primary;
+    background: $colorPrimary !important;
+    color: white;
+  }
+}

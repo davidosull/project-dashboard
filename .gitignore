@@ -1,0 +1,17 @@
+!.gitignore
+node_modules/
+/.vscode
+.babelrc
+.eslintignore
+.eslintrc
+config.barebones.js
+gulpfile.babel.js
+package-lock.json
+screenshot.jpg
+index.php
+page.php
+search.php
+single.php
+/templates
+/includes/banners
+/includes/page-builder.php

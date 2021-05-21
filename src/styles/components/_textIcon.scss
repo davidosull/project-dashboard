@@ -1,0 +1,30 @@
+.textIcon {
+  padding-left: 4rem;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 2.4rem;
+    width: 2.4rem;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--small {
+    padding-left: 3rem;
+    &:before {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &--link {
+    &:before {
+      background-image: url('#{$resPath}/img/arrow-right-circle.svg');
+    }
+  }
+}

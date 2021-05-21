@@ -1,0 +1,20 @@
+.admin {
+  background: $colorBackground;
+
+  &__form {
+    grid-column: span 12;
+    padding: $l2;
+    background: white;
+    border-radius: $br;
+    box-shadow: $bsMD;
+
+    input,
+    .gchoice label {
+      background: $colorBackground !important;
+    }
+  }
+
+  &__pass {
+    display: none;
+  }
+}

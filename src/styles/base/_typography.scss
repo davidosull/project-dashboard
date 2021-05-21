@@ -1,0 +1,87 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: $fontFamilySans;
+  line-height: $lineHeight;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $fontFamilySans;
+  line-height: $lineHeight;
+}
+
+h1,
+.h1 {
+  font-size: clamp(3.052rem, calc(2.7534rem + 0.8293vw), 3.815rem);
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+}
+h2,
+.h2 {
+  font-size: clamp(2.441rem, calc(2.2019rem + 0.6641vw), 3.052rem);
+  font-weight: 400;
+  letter-spacing: -0.1rem;
+}
+h3,
+.h3 {
+  font-size: clamp(1.953rem, calc(1.762rem + 0.5304vw), 2.441rem);
+  font-weight: 600;
+  letter-spacing: -0.1rem;
+}
+h4,
+.h4 {
+  @extend p.large;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+h5,
+.h5 {
+  @extend p;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+h6,
+.h6 {
+  @extend p.small;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.125rem;
+}
+
+p {
+  line-height: $lineHeight;
+  @include fontSize(15.63);
+
+  &.large {
+    @include fontSize(19.53);
+  }
+
+  &.small {
+    @include fontSize(12.5);
+  }
+
+  &.micro {
+    @include fontSize(10);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+small,
+.small {
+  @extend p.small;
+}
+
+strong {
+  font-weight: 600;
+}

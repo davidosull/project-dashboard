@@ -1,0 +1,26 @@
+.prototype {
+  background: $colorBackground;
+
+  &__card {
+    padding: 0;
+    background: white;
+
+    .card {
+      &__desc {
+        margin-top: $l2;
+        padding-top: $l2;
+        border-top: 1px solid $colorDivider;
+
+        .textIcon {
+          &:before {
+            height: 2rem;
+            width: 2rem;
+            background-image: url('#{$resPath}/img/download.svg');
+            top: 0.5rem;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}

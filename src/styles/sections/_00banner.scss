@@ -1,0 +1,27 @@
+.banner {
+  position: relative;
+  overflow: hidden;
+  background: $colorPrimary;
+
+  a {
+    color: white;
+
+    &:hover {
+      color: white;
+      opacity: 0.75;
+    }
+  }
+
+  .intro {
+    @include rMin($lg) {
+      grid-column: span 6;
+    }
+  }
+
+  &__intro {
+    h3,
+    p {
+      color: white;
+    }
+  }
+}

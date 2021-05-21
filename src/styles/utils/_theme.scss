@@ -1,0 +1,122 @@
+.t {
+  &__line {
+    position: relative;
+    padding-bottom: $l1;
+    margin-bottom: $l1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 128px;
+      max-width: 100%;
+      height: 2px;
+      background-color: $colorSecondary;
+    }
+
+    &--centered {
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__bg {
+    &--primary {
+      background-color: $colorPrimary;
+    }
+
+    &--secondary {
+      background-color: $colorSecondary;
+    }
+
+    &--neutral {
+      background-color: $colorBackground;
+    }
+
+    &--white {
+      background-color: white;
+    }
+  }
+
+  &__body {
+    letter-spacing: normal;
+    font-weight: normal;
+    line-height: $lineHeight;
+    text-transform: none;
+    @include fontSize($fontSize);
+  }
+
+  &__color {
+    &--primary {
+      color: $colorPrimary;
+    }
+
+    &--accent {
+      color: $colorSecondary;
+    }
+
+    &--colorNeutral {
+      color: $colorBackground;
+    }
+
+    &--white {
+      color: white;
+    }
+  }
+
+  &__icon {
+    border-radius: $s2;
+    font-size: 1.05rem;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+    @include rMin($lg) {
+      font-size: 1.3125rem;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      @include centerAll;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    transform: translateX(0);
+    margin-top: $m3;
+
+    &:after {
+      content: '\276F';
+      position: absolute;
+      transition: all $ani $aniSpeed;
+      color: $colorSecondary;
+      left: 2rem;
+      top: 0.35rem;
+      opacity: 0;
+      transform: translateX(0);
+      line-height: 1;
+    }
+
+    &--white {
+      &:after {
+        color: white;
+      }
+    }
+
+    &:hover {
+      transform: translateX(1.5rem);
+
+      &:after {
+        transform: translateX(-3.5rem);
+        opacity: 1;
+      }
+    }
+  }
+}

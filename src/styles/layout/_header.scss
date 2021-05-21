@@ -1,0 +1,56 @@
+.header {
+  background-color: white;
+  position: sticky;
+  z-index: 500;
+  top: 0;
+
+  .wrap {
+    position: relative;
+    justify-content: space-between;
+    padding: $l1 0;
+  }
+
+  .logo {
+    &--mark {
+      @include rMin($md) {
+        display: none;
+      }
+    }
+
+    &--full {
+      display: none;
+
+      @include rMin($md) {
+        display: block;
+      }
+    }
+  }
+
+  &__logo {
+    img {
+      height: 4.8rem;
+      transition: all $aniSpeed $ani;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    display: none;
+
+    @include rMin($lg) {
+      display: block;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        margin-right: $l2;
+      }
+    }
+  }
+}

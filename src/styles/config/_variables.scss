@@ -1,0 +1,83 @@
+$distPath: '../dist';
+$srcPath: '../src';
+$resPath: '../../res';
+
+// Colors
+
+$colorPrimaryDark1: #000;
+$colorPrimaryDark2: #00030a;
+$colorPrimary: #00113d;
+$colorPrimaryLight1: #002070;
+$colorPrimaryLight2: #002ea3;
+$colorSecondaryDark1: #ba1c41;
+$colorSecondaryDark2: #df2a54;
+$colorSecondary: #e65678;
+$colorSecondaryLight1: #ec839b;
+$colorSecondaryLight2: #f3afbf;
+$colorSuccessDark1: #366615;
+$colorSuccessDark2: #4d901d;
+$colorSuccess: #64ba26;
+$colorSuccessLight1: #7dd73c;
+$colorSuccessLight2: #99e067;
+$colorSuccessLight3: #e3f6d5;
+$colorErrorDark1: #e91501;
+$colorErrorDark2: #fe3220;
+$colorError: #fe6152;
+$colorErrorLight1: #fe8f85;
+$colorErrorLight2: #ffbeb8;
+$colorErrorLight3: #ffd0cc;
+$colorWarningDark1: #927a01;
+$colorWarningDark2: #c5a402;
+$colorWarning: #f7cf02;
+$colorWarningLight1: #fddb30;
+$colorWarningLight2: #fde462;
+$colorWarningLight3: #fef6cd;
+$colorTextDark: $colorPrimaryDark2;
+$colorText: $colorPrimary;
+$colorTextLight: $colorPrimaryLight1;
+$colorBackground: #f5f8ff;
+$colorDivider: #c2d3ff;
+
+// Typography
+$fontFamilySans: 'Lexend', sans-serif;
+// $fontFamilySerif: 'Roboto Slab', serif;
+$fontFamily: $fontFamilySans;
+$fontSize: 14.24;
+$lineHeight: 1.8;
+$spacingUnit: ($fontSize * $lineHeight) * 0.1rem;
+
+// Sizes & Spacing
+$s1: 0.25rem;
+$s2: 0.5rem;
+$s3: 0.75rem;
+$m1: 1rem;
+$m2: 1.25rem;
+$m3: 1.5rem;
+$l1: 2rem;
+$l2: 3rem;
+$l3: 4rem;
+$xl1: 5rem;
+$xl2: 7.5rem;
+$xl3: 10rem;
+$br: $s3;
+$s: $l2;
+
+// Grid & Breakpoints
+$xl: 1280px;
+$lg: 1024px;
+$md: 768px;
+$sm: 640px;
+$xs: 480px;
+$xxs: 370px;
+
+// Animations
+$aniSpeed: 250ms;
+$ani: ease-in-out;
+
+// Box Shadow
+$bsSM: 0 1.3px 2.3px rgba($colorPrimary, 0.04),
+  0 4.5px 7.8px rgba($colorPrimary, 0.06), 0 20px 35px rgba($colorPrimary, 0.1);
+$bsMD: 0 2px 3px rgba($colorPrimary, 0.04),
+  0 6.7px 10.1px rgba($colorPrimary, 0.06), 0 30px 45px rgba($colorPrimary, 0.1);
+$bsLG: 0 2.7px 3.7px rgba($colorPrimary, 0.04),
+  0 8.9px 12.3px rgba($colorPrimary, 0.06), 0 40px 55px rgba($colorPrimary, 0.1);

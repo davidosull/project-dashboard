@@ -1,0 +1,36 @@
+.updates {
+  background: $colorBackground;
+
+  h5 {
+    grid-column: span 12;
+    margin-bottom: 0;
+  }
+
+  &__group {
+    grid-column: span 12;
+    max-height: 512px;
+    overflow-y: scroll;
+    border-top: 1px solid $colorDivider;
+    border-bottom: 1px solid $colorDivider;
+    // margin: $m2 0;
+    background: white;
+  }
+}
+
+.update {
+  padding: $l2;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $colorDivider;
+  }
+
+  &__date {
+    margin-top: $m2;
+
+    .textIcon {
+      &:before {
+        background-image: url('#{$resPath}/img/time.svg');
+      }
+    }
+  }
+}

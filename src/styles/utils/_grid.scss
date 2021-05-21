@@ -1,0 +1,53 @@
+.wrap {
+  margin: 0 auto;
+  padding-top: clamp($xl2, 3vw, $xl3);
+  width: calc(100% - (#{$l2} * 2));
+  word-break: break-word;
+
+  &--flex {
+    display: flex;
+    align-items: center;
+  }
+
+  &--grid {
+    display: grid;
+    row-gap: $l2;
+    grid-template-columns: repeat(12, 1fr);
+
+    @include rMin($sm) {
+      gap: $l2;
+    }
+  }
+
+  &--gridGap {
+    row-gap: $xl1;
+  }
+
+  &--gap {
+    padding-bottom: clamp($xl2, 3vw, $xl3);
+
+    &Half {
+      padding-bottom: clamp($l2, 3vw, $l3);
+    }
+  }
+
+  &--blog {
+    padding-top: clamp($xl1, 3vw, $xl2);
+  }
+
+  @include rMin($sm) {
+    max-width: $sm;
+  }
+
+  @include rMin($md) {
+    max-width: $md;
+  }
+
+  @include rMin($lg) {
+    max-width: $lg;
+  }
+
+  @include rMin($xl) {
+    max-width: $xl;
+  }
+}

@@ -1,0 +1,57 @@
+.progress {
+  &__cards {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: $l2;
+
+    @include rMin($xs) {
+      gap: $l2;
+    }
+  }
+
+  &__card {
+    &:nth-of-type(1) {
+      .card__icon {
+        &:after {
+          background-image: url('#{$resPath}/img/onboarding.svg');
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .card__icon {
+        &:after {
+          background-image: url('#{$resPath}/img/design.svg');
+        }
+      }
+    }
+    &:nth-of-type(3) {
+      .card__icon {
+        &:after {
+          background-image: url('#{$resPath}/img/develop.svg');
+        }
+      }
+    }
+    &:nth-of-type(4) {
+      .card__icon {
+        &:after {
+          background-image: url('#{$resPath}/img/launch.svg');
+        }
+      }
+    }
+    &:nth-of-type(5) {
+      .card__icon {
+        &:after {
+          background-image: url('#{$resPath}/img/post-launch.svg');
+        }
+      }
+    }
+    &:nth-of-type(6) {
+      .card__icon {
+        &:after {
+          background-image: url('#{$resPath}/img/aftercare.svg');
+        }
+      }
+    }
+  }
+}

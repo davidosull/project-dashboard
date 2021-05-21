@@ -1,0 +1,28 @@
+/* These styles apply to wide screen layout. Mobile defaults to single column. */
+
+@include rMin($sm) {
+  .ginput_container_name {
+    display: flex;
+    justify-content: space-between;
+
+    .name_prefix {
+      flex: 0 0 80;
+    }
+
+    .name_prefix,
+    .name_suffix {
+      flex: 0 0 100px;
+    }
+
+    .name_first,
+    .name_middle,
+    .name_last {
+      flex: 0 auto;
+      width: calc(50% - #{$l2}/ 2);
+    }
+
+    & > span:last-child {
+      padding-right: 0;
+    }
+  }
+}

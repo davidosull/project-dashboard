@@ -1,0 +1,73 @@
+// Custom Radio Buttons on Quote Form
+.gfield_radio {
+  @include rMin($xs) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: $m3;
+    }
+
+    @include rMin($xs) {
+      margin-bottom: $m3;
+    }
+
+    @include rMin($xs) {
+      width: calc(50% - #{$gfs-form-spacing-x}/ 2);
+    }
+
+    &:first-of-type {
+      label {
+        &:after {
+          content: '';
+          background-image: url('#{$resPath}/img/confetti.svg');
+        }
+      }
+    }
+
+    &:last-of-type {
+      label {
+        &:after {
+          content: '';
+          background-image: url('#{$resPath}/img/wedding-couple.svg');
+        }
+      }
+    }
+
+    input {
+      display: none;
+      &:checked {
+        + label {
+          border-color: $colorPrimary;
+        }
+      }
+    }
+
+    label {
+      display: block;
+      padding: 16px 20px;
+      border: 1px solid $colorDivider;
+      border-radius: $s3;
+      padding: $l2;
+      margin-left: 0;
+      transition: border-color $aniSpeed $ani;
+      position: relative;
+      height: 20rem;
+      text-align: center;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 57%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 10rem;
+        width: 10rem;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+}

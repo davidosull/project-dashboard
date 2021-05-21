@@ -1,0 +1,130 @@
+$gfs-field-height: 34px !default; // This requires a numeric value for calculations.
+$gfs-icon-size: 24px !default; // This is determined by the height of our icon sprite.
+$gfs-padding-small: 5px !default;
+$gfs-padding-medium: 10px !default;
+$gfs-padding-large: 20px !default;
+
+$gfs-field-font-size: inherit !default;
+$gfs-field-font-family: inherit !default;
+$gfs-field-line-height: 18px !default; // This requires a numeric value for calculations.
+$gfs-field-background-color: #fff !default;
+$gfs-field-padding-y: ($gfs-field-height - $gfs-field-line-height) / 2 !default;
+$gfs-field-padding-x: $gfs-padding-small !default;
+
+$gfs-label-font-family: inherit !default;
+$gfs-label-font-size: inherit !default;
+$gfs-label-line-height: 18px !default; // This requires a numeric value for calculations.
+$gfs-label-padding: 0 0 $gfs-padding-small;
+
+$gfs-field-description-padding: 0 0 $gfs-padding-small;
+
+$gfs-button-font-family: inherit !default;
+$gfs-button-font-size: inherit !default;
+$gfs-button-padding-x: $gfs-padding-medium;
+$gfs-button-padding-y: $gfs-field-padding-y;
+
+$gfs-container-background-color: #efefef !default;
+$gfs-border-radius: 3px !default;
+$gfs-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03) !default;
+$gfs-border-color: #cdcdcd !default;
+$gfs-border-style: solid !default;
+$gfs-border-width: 1px !default;
+
+$gfs-field-description-font-size: 14px !default;
+$gfs-label-font-size: inherit !default;
+$gfs-sub-label-font-size: 12px !default;
+
+$gfs-error-color: $colorError !default;
+$gfs-error-background: $colorErrorLight2 !default;
+
+// This value works best if it is a number divisble by 2, 3, and 4.
+// For example, 12, 24, etc are good numbers.
+$gfs-form-spacing-x: 12px !default;
+$gfs-form-spacing-y: 12px !default;
+
+$gfs-breakpoint-small: 768px !default;
+
+%error-message {
+  background: $gfs-error-color;
+  color: #fff;
+}
+
+/* Basic Icons */
+
+%gf-basic-icon {
+  @extend %icons-basic;
+
+  display: inline-block;
+  height: $gfs-icon-size;
+  text-indent: -9999px;
+  width: $gfs-icon-size;
+}
+
+%gf-icon-search {
+  background-position-x: 0 * $gfs-icon-size;
+}
+
+%gf-icon-pin {
+  background-position-x: -1 * $gfs-icon-size;
+}
+
+%gf-icon-new-window {
+  background-position-x: -2 * $gfs-icon-size;
+}
+
+%gf-icon-calendar {
+  background-position-x: -3 * $gfs-icon-size;
+}
+
+%gf-icon-chevron-right {
+  background-position-x: -4 * $gfs-icon-size;
+}
+
+%gf-icon-chevron-left {
+  background-position-x: -5 * $gfs-icon-size;
+}
+
+%gf-icon-chevron-down {
+  background-position-x: -6 * $gfs-icon-size;
+}
+
+%gf-icon-chevron-up {
+  background-position-x: -7 * $gfs-icon-size;
+}
+
+/* CC Icons */
+
+@if $gfs-use-credit-card-styles {
+  %gf-cc-icon {
+    @extend %icons-cc;
+
+    display: inline-block;
+    height: 32px;
+    text-indent: -9999px;
+    width: 41px;
+  }
+
+  %gf-icon-cc-plain {
+    background-position-x: 0 * 41px;
+  }
+
+  %gf-icon-cc-amex {
+    background-position-x: -1 * 41px;
+  }
+
+  %gf-icon-cc-discover {
+    background-position-x: -2 * 41px;
+  }
+
+  %gf-icon-cc-master {
+    background-position-x: -3 * 41px;
+  }
+
+  %gf-icon-cc-paypal {
+    background-position-x: -4 * 41px;
+  }
+
+  %gf-icon-cc-visa {
+    background-position-x: -5 * 41px;
+  }
+}

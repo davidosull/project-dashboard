@@ -1,0 +1,135 @@
+@import 'icons';
+@import 'variables';
+
+input.medium,
+select.medium {
+  width: 50%;
+}
+
+input.small,
+select.small {
+  width: 25%;
+}
+
+textarea {
+  height: auto;
+}
+
+.gform_wrapper .gform_fields .gfield {
+  margin-bottom: $m2;
+  margin-bottom: $l1;
+}
+
+.gform_fields {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    list-style: none;
+    list-style-type: none;
+  }
+}
+
+.ginput_container {
+  margin-bottom: 0;
+}
+
+.ginput_container.ginput_complex {
+  margin-bottom: 0;
+}
+
+.ginput_complex > span {
+  display: block;
+}
+
+.gfield_radio,
+.gfield_checkbox {
+  margin-bottom: $m3;
+}
+
+.gfield_radio label {
+  font-size: 95%;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.gfield_checkbox label {
+  font-size: 95%;
+  font-weight: normal;
+  margin-left: 6px;
+}
+
+/* Labels */
+.gfield_label {
+  font-family: $gfs-label-font-family;
+  font-size: $gfs-label-font-size;
+  line-height: $gfs-label-line-height;
+  margin-bottom: $m1;
+  display: block;
+
+  span {
+    color: $colorSecondary;
+  }
+}
+
+.hidden_label > label,
+label.hidden_sub_label {
+  display: none;
+}
+
+/* Sub Labels */
+.ginput_complex > span > label {
+  font-size: $gfs-sub-label-font-size;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Description */
+.gfield_description {
+  font-size: small;
+  margin-bottom: $m1;
+}
+
+/* Hide validation fields */
+body .gform_wrapper .gform_validation_container {
+  display: none;
+}
+
+/* Buttons */
+input[type='button'],
+input[type='submit'] {
+  font-weight: 600;
+  border-radius: $gfs-border-radius;
+  // padding: $gfs-button-padding-y $gfs-button-padding-x;
+}
+
+/* Confirmations */
+.gform_confirmation_wrapper {
+  border: 1px solid $colorDivider;
+  padding: $l3;
+  border-radius: $s3;
+  background: $colorBackground;
+}
+
+/* Screen Reader */
+.screen-reader-text {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+/* Specific field styles imported here */
+@import 'css-ready-classes';
+@import 'utility-classes';
+@import 'name-field';
+@import 'text-area';
+@import 'errors';
+// @import 'date-field';
+// @import 'custom';
+
+// @import 'address-field';
+// @import 'credit-card-field';
+// @import 'file-upload-field';
+// @import 'select';
+// @import 'time-field';

@@ -1,0 +1,77 @@
+.btn,
+.button {
+  border-radius: $s2;
+  border: 1px solid transparent;
+  padding: $m2 $l2;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  width: auto;
+  transition: all $aniSpeed $ani;
+  display: inline-block;
+
+  &:not(.btn--header) {
+    margin-top: $l1;
+  }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: $bsSM;
+  }
+
+  &--primary,
+  &-primary {
+    background-color: $colorPrimary;
+    border-color: $colorPrimary;
+    color: white;
+
+    &:hover {
+      background-color: $colorPrimary;
+      border-color: $colorPrimary;
+    }
+  }
+
+  &--small {
+    padding: $s2 $m1;
+  }
+  &--large {
+    padding: $m3 $l2;
+  }
+
+  &--accent {
+    background-color: $colorSecondary;
+    border-color: $colorSecondary;
+    color: white;
+
+    &:hover {
+      background-color: $colorSecondaryDark1;
+    }
+  }
+
+  &--header {
+    display: none;
+
+    @include rMin($xxs) {
+      display: block;
+      margin-right: $l2;
+    }
+
+    @include rMin($lg) {
+      margin-right: 0;
+    }
+  }
+
+  &--white {
+    background: white;
+    color: $colorText;
+
+    &:hover {
+      background: transparent;
+      border-color: white;
+      color: white;
+    }
+  }
+}

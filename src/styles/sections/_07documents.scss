@@ -1,0 +1,13 @@
+.documents {
+  &__card {
+    background: $colorBackground;
+  }
+
+  .textIcon {
+    &:before {
+      background-image: url('#{$resPath}/img/download.svg');
+      top: 0.5rem;
+      transform: none;
+    }
+  }
+}

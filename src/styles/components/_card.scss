@@ -1,0 +1,163 @@
+.card {
+  $self: &;
+  position: relative;
+  border-radius: $br;
+  padding: $l2;
+  box-shadow: $bsSM;
+  overflow: hidden;
+
+  &--simple {
+    grid-column: span 12;
+
+    @include rMin($sm) {
+      grid-column: span 6;
+    }
+    @include rMin($lg) {
+      grid-column: span 4;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    height: 6.4rem;
+    width: 6.4rem;
+    background: rgba(white, 0.5);
+    border-radius: $br;
+    margin-bottom: $l2;
+
+    &:after {
+      content: '';
+      height: 3.2rem;
+      width: 3.2rem;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__image {
+    display: block;
+    position: relative;
+    padding-top: 75%;
+
+    img {
+      @include cover;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  &__status {
+    position: relative;
+    margin-bottom: $l2;
+    padding: $s2 1.5rem $s2 2.5rem;
+    background: rgba(white, 0.5);
+    display: inline-block;
+    border-radius: 2rem;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 0.75rem;
+      width: 0.75rem;
+      border-radius: 50%;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__dates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $m2;
+  }
+
+  &__date {
+    position: relative;
+    padding-left: 3.2rem;
+    grid-column: span 2;
+
+    &:before {
+      background-image: url('#{$resPath}/img/calendar.svg');
+    }
+
+    &--dark {
+      &:before {
+        background-image: url('#{$resPath}/img/calendar-dark.svg');
+      }
+    }
+  }
+
+  &__desc {
+    margin-top: $l2;
+    padding-top: $l2;
+    border-top: 1px solid $colorDivider;
+
+    .textIcon {
+      &:before {
+        height: 2rem;
+        width: 2rem;
+        background-image: url('#{$resPath}/img/download.svg');
+        top: 0.5rem;
+        transform: none;
+      }
+    }
+  }
+
+  &--progress {
+    border: 1px solid transparent;
+  }
+
+  &--not-started,
+  &--inactive {
+    background: $colorErrorLight3;
+    border-color: $colorErrorLight1;
+
+    #{$self}__status {
+      &:before {
+        background: $colorError;
+      }
+    }
+  }
+
+  &--in-progress {
+    background: $colorWarningLight3;
+    border-color: $colorWarningLight1;
+
+    #{$self}__status {
+      &:before {
+        background: $colorWarning;
+      }
+    }
+  }
+
+  &--complete,
+  &--active {
+    background: $colorSuccessLight3;
+    border-color: $colorSuccessLight1;
+
+    #{$self}__status {
+      &:before {
+        background: $colorSuccess;
+      }
+    }
+  }
+
+  &--link {
+    transition: all $aniSpeed $ani;
+
+    &:hover {
+      box-shadow: $bsLG;
+    }
+
+    #{$self}__image {
+      &:hover {
+        background: rgba($colorPrimary, 0.125);
+      }
+    }
+  }
+}

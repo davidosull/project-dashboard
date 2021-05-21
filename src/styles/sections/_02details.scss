@@ -1,0 +1,55 @@
+.details {
+  background: $colorBackground;
+  &__content {
+    grid-column: span 12;
+  }
+
+  &__card {
+    background: white;
+    padding: $l2;
+
+    h5 {
+      border-bottom: 1px solid $colorDivider;
+      padding-bottom: $m2;
+      margin-bottom: $l2;
+    }
+  }
+  &__email,
+  &__phone {
+    display: block;
+    margin-bottom: 0.75em;
+  }
+  &__company {
+    &:before {
+      background-image: url('#{$resPath}/img/company.svg');
+    }
+  }
+  &__contact {
+    &:before {
+      background-image: url('#{$resPath}/img/contact.svg');
+    }
+  }
+  &__email {
+    &:before {
+      background-image: url('#{$resPath}/img/email.svg');
+    }
+  }
+  &__phone {
+    &:before {
+      background-image: url('#{$resPath}/img/phone.svg');
+    }
+  }
+  &__date {
+    &--start,
+    &--end {
+      &:before {
+        background-image: url('#{$resPath}/img/calendar.svg');
+      }
+    }
+  }
+  &__value {
+    &:before {
+      background-image: url('#{$resPath}/img/value.svg');
+    }
+  }
+}

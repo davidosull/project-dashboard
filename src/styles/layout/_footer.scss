@@ -1,0 +1,23 @@
+.footer {
+  $self: &;
+  background: $colorSecondary;
+  font-size: small;
+  color: white;
+
+  a {
+    color: white;
+    font-weight: 600;
+  }
+
+  img {
+    height: 1.4rem;
+    position: absolute;
+    top: 0.125rem;
+    right: 0;
+  }
+
+  .wrap {
+    padding: $l1 0;
+    align-items: center;
+  }
+}
