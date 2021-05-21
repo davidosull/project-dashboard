@@ -6,6 +6,7 @@ node_modules/
 .eslintrc
 config.barebones.js
 gulpfile.babel.js
+functions.php
 package-lock.json
 screenshot.jpg
 index.php
