@@ -1,0 +1,11 @@
+.client {
+  background: $colorBackground;
+  &__form {
+    background: white;
+
+    .gchoice label,
+    textarea {
+      background: $colorBackground !important;
+    }
+  }
+}

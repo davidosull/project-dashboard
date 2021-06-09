@@ -7,7 +7,7 @@ $current_user_id = get_current_user_id();
 <section class="admin">
   <div class="wrap wrap--grid">
     <div class="admin__intro intro">
-      <h3>10. Admin Form</h3>
+      <h3>11. Admin</h3>
     </div>
   </div>
 

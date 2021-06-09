@@ -3,7 +3,7 @@
 <section id="form" class="client">
   <div class="wrap wrap--grid">
     <div class="client__intro intro">
-      <h3>09. Client Communication</h3>
+      <h3>10. Client Communication</h3>
       <?php echo ($core) ? $core : ''; ?>
     </div>
   </div>

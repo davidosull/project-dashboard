@@ -1,16 +1,16 @@
 .admin {
-  background: $colorBackground;
+  background: white;
 
   &__form {
     grid-column: span 12;
     padding: $l2;
-    background: white;
+    background: $colorBackground;
     border-radius: $br;
     box-shadow: $bsMD;
 
     input,
     .gchoice label {
-      background: $colorBackground !important;
+      background: white !important;
     }
   }
 

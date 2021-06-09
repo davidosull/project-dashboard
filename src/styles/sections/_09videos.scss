@@ -1,0 +1,52 @@
+.videos {
+  &__group {
+    grid-column: span 12;
+  }
+  &__card {
+    padding: 0;
+    background: white;
+
+    .card {
+      &__image {
+        position: relative;
+        padding-top: 56.25%;
+
+        &:after {
+          content: '';
+          @include centerAll;
+          background-color: rgba($colorPrimary, 0.5);
+          background-image: url('#{$resPath}/img/play-white.svg');
+          background-size: 4rem 4rem;
+          background-position: center;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          position: absolute;
+          height: 5rem;
+          width: 5rem;
+          transition: background-color $aniSpeed $ani;
+        }
+
+        &:hover {
+          &:after {
+            background-color: rgba($colorPrimary, 0.75);
+          }
+        }
+
+        img {
+          object-fit: cover;
+        }
+      }
+      &__desc {
+        margin-top: $l2;
+        padding-top: $l2;
+        border-top: 1px solid $colorDivider;
+
+        .textIcon {
+          &:before {
+            background-image: url('#{$resPath}/img/play-red.svg');
+          }
+        }
+      }
+    }
+  }
+}

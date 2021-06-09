@@ -1,4 +1,5 @@
 import './jquery';
+import './fancybox';
 
 // first Section Scroll
 const firstSection = document.querySelectorAll('section');
@@ -7,7 +8,7 @@ if (firstSection[1]) {
   firstSection[1].id = 'first'; // Banner is always the first section
 }
 
-// Admin Notification From
+// Admin Notification Form
 const clientCard = document.querySelector('.project__card--client');
 
 if (clientCard) {

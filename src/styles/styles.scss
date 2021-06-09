@@ -4,6 +4,7 @@
 @import 'config/mixins';
 
 @import 'vendor/gravity-forms/main';
+@import 'vendor/fancybox';
 
 @import 'utils/reset';
 @import 'utils/grid';
@@ -32,8 +33,9 @@
 @import 'sections/06updates';
 @import 'sections/07documents';
 @import 'sections/08links';
-@import 'sections/09client';
-@import 'sections/10Admin';
+@import 'sections/09videos';
+@import 'sections/10client';
+@import 'sections/11admin';
 
 @import 'components/buttons';
 @import 'components/card';

@@ -79,7 +79,7 @@ add_filter('excerpt_length', function ($length) {
 });
 
 
-/**Function to change the default `wp-login.php` with your custom login page **/
+// Change default login page to custom template.
 add_filter('login_url', 'new_login_page', 10, 3);
 function new_login_page($login_url, $redirect, $force_reauth)
 {

@@ -24,6 +24,40 @@
     border-bottom: 1px solid $colorDivider;
   }
 
+  &__content {
+    ul {
+      list-style: none;
+      margin-left: $m2;
+      padding-left: $m2;
+      @extend p;
+
+      > li {
+        padding: $s2 0;
+
+        &::before {
+          content: '\2022';
+          color: $colorSecondary;
+          font-weight: bold;
+          font-size: 2rem;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+          line-height: 1;
+        }
+
+        ul {
+          list-style: circle;
+
+          li {
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__date {
     margin-top: $m2;
 
